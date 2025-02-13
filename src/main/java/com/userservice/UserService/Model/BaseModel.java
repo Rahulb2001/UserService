@@ -9,8 +9,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.batch.BatchTransactionManager;
 
-@Getter
-@Setter
 @MappedSuperclass
 public class BaseModel {
 
@@ -18,6 +16,7 @@ public class BaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Boolean isDeleted;
+
 
     public Long getId() {
         return id;
