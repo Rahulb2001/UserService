@@ -110,4 +110,6 @@ public class CustomUserDetails implements UserDetails {
     public void setAuthorities(List<CustomGrantedAuthority> authorities) {
         this.authorities = authorities;
     }
+
+
 }

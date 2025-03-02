@@ -1,6 +1,8 @@
 package com.userservice.UserService;
 
+import com.userservice.UserService.Model.Role;
 import com.userservice.UserService.Model.User;
+import com.userservice.UserService.Repository.RoleRepository;
 import com.userservice.UserService.Repository.UserInterface;
 import com.userservice.UserService.Security.Services.JpaRegisteredClientRepository;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,9 @@ class UserServiceApplicationTests {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     @Test
     void contextLoads() {
@@ -59,6 +64,15 @@ class UserServiceApplicationTests {
 //        user.setEmailVerified(false);
 //        user.setDeleted(false);
 //        userInterface.save(user);
+//    }
+
+//    @Test
+//    public void SaveRole(){
+//
+//        Role role = new Role();
+//        role.setName("INSTRUCTOR");
+//        role.setDeleted(false);
+//        roleRepository.save(role);
 //    }
 
 }
